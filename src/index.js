@@ -50,8 +50,12 @@ function decode(expr) {
                 let symb = char.slice(j, j + 2).replace('00', '').replace('10', '.').replace('11', '-');
                 symbols += symb;
             }
+            output += MORSE_TABLE[symbols];
+        }
+    }
+    return output;
 }
 
 module.exports = {
-    
+    decode
 }
